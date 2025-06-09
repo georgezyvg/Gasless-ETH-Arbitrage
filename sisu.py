@@ -8,7 +8,7 @@ infura_url = "https://mainnet.infura.io/v3/9ca9e6b89ff8465d9c3cdbb0e43d9ab0"
 w3 = Web3(Web3.HTTPProvider(infura_url))
 
 ENTRYPOINT_ADDRESS = cs("0xc3f1c9ee378e9f4963ce11e5f5ddbf181494a8e8")  
-PAYMASTER_ADDRESS = cs("0xea0ab9e7e4254ab56b04facbb3f0947bb758add6b8d387a31a4fca81956cd416")  
+PAYMASTER_ADDRESS = cs("fe3acae8b8a2fd6805ba14df38ff2791f8641d19c58f25def7d4ca3732d6f7e8")  
 BUNDLER_API = "https://api.bundler.network/rpc"  
 
 PRIVATE_KEY = input("0xea0ab9e7e4254ab56b04facbb3f0947bb758add6b8d387a31a4fca81956cd416")
