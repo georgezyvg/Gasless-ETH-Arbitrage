@@ -12,7 +12,7 @@ PAYMASTER_ADDRESS = cs("0x0000000000000000000000000000000000000000")
 BUNDLER_API = "https://api.bundler.network/rpc"  
 
 PRIVATE_KEY = input("Enter Private Key: ").strip()
-MY_ADDRESS = cs(input("Enter Your Wallet Address: ").strip())
+MY_ADDRESS = cs(input("0xc7E1aBf1f6d2d0315592DC963a72B4231650a0F7: ").strip())
 
 AAVE_POOL_ADDRESS = cs("0x87870bca3f3fd6335c3f4ce8392d69350b4fa4e2")
 UNISWAP_ROUTER_ADDRESS = cs("0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D")
