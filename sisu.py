@@ -4,7 +4,7 @@ import json, requests, time
 def cs(address):
     return Web3.to_checksum_address(address)
 
-infura_url = "https://mainnet.infura.io/v3/90d0df01d1b84a00a8c54330b1a3c54d"  
+infura_url = "https://mainnet.infura.io/v3/9ca9e6b89ff8465d9c3cdbb0e43d9ab0"  
 w3 = Web3(Web3.HTTPProvider(infura_url))
 
 ENTRYPOINT_ADDRESS = cs("0x1306A3d7A1a554B6a356F7241B07e4D377f6044E")  
