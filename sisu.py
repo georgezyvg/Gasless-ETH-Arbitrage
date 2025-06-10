@@ -8,8 +8,7 @@ infura_url = "https://mainnet.infura.io/v3/9ca9e6b89ff8465d9c3cdbb0e43d9ab0"
 w3 = Web3(Web3.HTTPProvider(infura_url))
 
 ENTRYPOINT_ADDRESS = cs("0x1306A3d7A1a554B6a356F7241B07e4D377f6044E")  
-PAYMASTER_ADDRESS = cs("0x0000000000000000000000000000000000000000")  
-BUNDLER_API = "https://api.bundler.network/rpc"  
+PAYMASTER_ADDRESS = cs("0x0000000000000000000000000000000000000000")    
 
 PRIVATE_KEY = input("Enter Private Key: ").strip()
 MY_ADDRESS = cs(input("Enter Your Wallet Address: ").strip())
