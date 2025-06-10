@@ -4,15 +4,15 @@ import json, requests, time
 def cs(address):
     return Web3.to_checksum_address(address)
 
-infura_url = "https://mainnet.infura.io/v3/9ca9e6b89ff8465d9c3cdbb0e43d9ab0"  
+infura_url = "https://mainnet.infura.io/v3/90d0df01d1b84a00a8c54330b1a3c54d"  
 w3 = Web3(Web3.HTTPProvider(infura_url))
 
-ENTRYPOINT_ADDRESS = cs("0xc3f1c9ee378e9f4963ce11e5f5ddbf181494a8e8")  
-PAYMASTER_ADDRESS = cs("0xfe3acae8b8a2fd6805ba14df38ff2791f8641d19c58f25def7d4ca3732d6f7e8")  
+ENTRYPOINT_ADDRESS = cs("0x1306A3d7A1a554B6a356F7241B07e4D377f6044E")  
+PAYMASTER_ADDRESS = cs("0x0000000000000000000000000000000000000000")  
 BUNDLER_API = "https://api.bundler.network/rpc"  
 
-PRIVATE_KEY = input("0xea0ab9e7e4254ab56b04facbb3f0947bb758add6b8d387a31a4fca81956cd416")
-MY_ADDRESS = cs("0xc3f1c9ee378e9f4963ce11e5f5ddbf181494a8e8")
+PRIVATE_KEY = input("Enter Private Key: ").strip()
+MY_ADDRESS = cs(input("Enter Your Wallet Address: ").strip())
 
 AAVE_POOL_ADDRESS = cs("0x87870bca3f3fd6335c3f4ce8392d69350b4fa4e2")
 UNISWAP_ROUTER_ADDRESS = cs("0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D")
@@ -65,7 +65,7 @@ def execute_gasless_arbitrage():
         "from": MY_ADDRESS, "gas": 1000000, "gasPrice": get_gas_price(),
         "nonce": w3.eth.get_transaction_count(MY_ADDRESS)
     })
-    
+
     signed_tx = w3.eth.account.sign_transaction(flashloan_tx, PRIVATE_KEY)
     raw_tx = signed_tx.rawTransaction.hex()
 
